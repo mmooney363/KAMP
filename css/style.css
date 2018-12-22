@@ -10,7 +10,13 @@ nav ul a,
 nav .brand-logo {
   color: #444;
 }
+img {
+  opacity: 0.8;;
+}
 
+.btn {
+  opacity: 0.8;
+}
 
   html {
     scroll-behavior: smooth;
