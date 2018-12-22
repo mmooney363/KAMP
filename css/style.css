@@ -12,6 +12,11 @@ nav .brand-logo {
 }
 
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+
 p {
   line-height: 2rem;
 }
