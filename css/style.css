@@ -10,6 +10,17 @@ nav ul a,
 nav .brand-logo {
   color: #444;
 }
+img {
+  opacity: 0.8;;
+}
+
+.btn-large {
+  opacity: 0.8;
+}
+
+  html {
+    scroll-behavior: smooth;
+  }
 
 
 p {
