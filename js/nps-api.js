@@ -18,6 +18,6 @@ var parkURL = "";
 
         for (var i = 0; i < response.data.length; i++) {
           parkName = response.data[i].fullName; 
-          $("#test-results").append("<li>" + parkName + "</li>");
+          $("#search-results").append("<li>" + parkName + "</li>");
         }
     });
