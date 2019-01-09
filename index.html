@@ -24,12 +24,15 @@
           <li><a href="#searchid">Search</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#index-banner">Home</a></li>
+          <li><a href="#">Home</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Home</a></li>
           <li><a href="#">Search</a></li>
+          <li><a href="#">Info</a></li>
         </ul>
+
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
     </nav>
@@ -39,7 +42,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2"><img src="logo.png"></h1>
+        <h1 class="header center teal-text text-lighten-2"><a href="#"><img src="logo.png"></a></h1>
        
         <div class="row center">
           <a href="#searchid" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get
@@ -63,34 +66,28 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+            <h2 class="center brown-text"><i class="material-icons">art_track</i></h2>
+            <h5 class="center">Search</h5>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate
-              our custom components. Additionally, we refined animations and transitions to provide a smoother
-              experience for developers.</p>
+            <h6 class="light center-align"><br>Click get started above or scroll <br><br> down to search for your next trip to <br><br> America's National Parks!</h6>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+            <h2 class="center brown-text"><i class="material-icons">landscape</i></h2>
+            <h5 class="center">Location</h5>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a
-              framework that incorporates components and animations that provide more feedback to users. Additionally,
-              a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <h6 class="light center-align"><br>Pick the one or multiple states for <br><br>your trip!</h6>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
+            <h2 class="center brown-text"><i class="material-icons">brightness_high</i></h2>
+            <h5 class="center">Weather</h5>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new
-              users get started. We are also always open to feedback and can answer any questions a user may have about
-              Materialize.</p>
+            <h6 class="light center-align"><br>See the latest forcast at your next <br><br>adventure!</h6>
           </div>
         </div>
       </div>
@@ -171,6 +168,9 @@
             <option value="WY">Wyoming</option>
           </select>
           <label>Search</label>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
         </div>
       </div>
 
@@ -182,49 +182,19 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Thank you for your interest in America's National Parks!</h5>
         </div>
       </div>
     </div>
     <div class="parallax"><img src="b10.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal" id="bioid">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our
-            full time job. Any amount would help support and continue development on this project and is greatly
-            appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
+  <footer class="page-footer footer-copyright teal center-align" id="bioid">
       <div class="container">
-        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        <a class="brown-text text-lighten-3">Copyright © 2019 KAMP</a>
+        <br>
+        <br>
       </div>
-    </div>
   </footer>
 
 
@@ -233,6 +203,7 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script scr="js/weather.js"></script>
+  <script src="js/nps-api.js"></script>
 </body>
 
 </html>
