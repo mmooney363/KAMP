@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
               parkName = response.data[i].fullName;
               parkURL = response.data[i].url;
               parkLatLon = response.data[i].latLong;
+
               console.log(parkLatLon);
               var latEnd = parkLatLon.indexOf(".");
               wxLat = parkLatLon.substring(4,latEnd);
@@ -60,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // console.log(response.Runtime);
                 });
 
+              console.log(parkLatLon); 
+              
               $("#search-results").append("<li><a href=" + parkURL + ">" + parkName + "</li>");
             }
         });
