@@ -12,6 +12,9 @@ var parkLatLon = "";
 var parkCity = "";
 var parkURL = "";
 
+var wxLat, wxLon = "";
+
+
 document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelector('select');
     elems.onchange = selectThem;
@@ -38,7 +41,28 @@ document.addEventListener('DOMContentLoaded', function () {
               parkName = response.data[i].fullName;
               parkURL = response.data[i].url;
               parkLatLon = response.data[i].latLong;
+
+              console.log(parkLatLon);
+              var latEnd = parkLatLon.indexOf(".");
+              wxLat = parkLatLon.substring(4,latEnd);
+              console.log(wxLat);
+              var lonStart = parkLatLon.lastIndexOf(":") + 1;
+              var lonEnd = parkLatLon.lastIndexOf(".");
+              wxLon = parkLatLon.substring(lonStart, lonEnd);
+              console.log(wxLon);
+              
+              var wxURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + wxLat + "&lon=" + wxLon + "&APPID=7d303e69b0351c31f4dd317a06e61fed";
+
+                $.ajax({
+                url: wxURL,
+                method: "GET"
+                }).then(function(wxResponse) {
+                console.log(wxResponse);
+                // console.log(response.Runtime);
+                });
+
               console.log(parkLatLon); 
+              
               $("#search-results").append("<li><a href=" + parkURL + ">" + parkName + "</li>");
             }
         });
