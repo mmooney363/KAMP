@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
               wxLon = parkLatLon.substring(lonStart, lonEnd);
               console.log(wxLon);
               
-              var wxURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + wxLat + "&lon=" + wxLon + "&APPID=7d303e69b0351c31f4dd317a06e61fed";
+              var wxURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + wxLat + "&lon=" + wxLon + "&APPID=7d303e69b0351c31f4dd317a06e61fed&mode=html";
 
                 $.ajax({
                 url: wxURL,
