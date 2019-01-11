@@ -9,6 +9,7 @@ var queryURL = "";
 var parkName = "";
 var parkDescription = "";
 var parkLatLon = "";
+var parkCity = "";
 var parkURL = "";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -34,8 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }).then(function(response) {
         
             for (var i = 0; i < response.data.length; i++) {
-              parkName = response.data[i].fullName; 
-              $("#search-results").append("<li>" + parkName + "</li>");
+              parkName = response.data[i].fullName;
+              parkURL = response.data[i].url;
+              parkLatLon = response.data[i].latLong;
+              console.log(parkLatLon); 
+              $("#search-results").append("<li><a href=" + parkURL + ">" + parkName + "</li>");
             }
         });
     })
