@@ -50,20 +50,23 @@ document.addEventListener('DOMContentLoaded', function () {
               var lonEnd = parkLatLon.lastIndexOf(".");
               wxLon = parkLatLon.substring(lonStart, lonEnd);
               console.log(wxLon);
+
+              var wxResponse = "";
               
-              var wxURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + wxLat + "&lon=" + wxLon + "&APPID=7d303e69b0351c31f4dd317a06e61fed&mode=html";
+              var wxURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + wxLat + "&lon=" + wxLon + "&APPID=7d303e69b0351c31f4dd317a06e61fed&mode=html&units=imperial";
 
                 $.ajax({
                 url: wxURL,
                 method: "GET"
                 }).then(function(wxResponse) {
-                console.log(wxResponse);
-                // console.log(response.Runtime);
+                $("#weather-results").append(wxResponse);
+                 console.log(response.Runtime);
                 });
 
               console.log(parkLatLon); 
               
-              $("#search-results").append("<li><a href=" + parkURL + ">" + parkName + "</li>");
+              $("#search-results").append("<li><a href=" + parkURL + ">" + parkName + "</li>" + wxResponse);
+             
             }
         });
     })

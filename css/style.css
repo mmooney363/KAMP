@@ -72,3 +72,15 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+#search-results {
+  float:left;
+  
+}
+
+#weather-results {
+  float:left;
+  margin-left: 20%;
+ 
+}
+
